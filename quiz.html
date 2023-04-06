@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Quiz</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styles/app.css">
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="HandheldFriendly" content="true" />
+</head>
+
+<body>
+	<div class="preloader">
+		<svg class="preloader__image" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+			<path fill="currentColor"
+				d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z">
+			</path>
+		</svg>
+	</div>
+	<script>
+		window.onload = function () {
+			document.body.classList.add('loaded_hiding');
+			window.setTimeout(function () {
+				document.body.classList.add('loaded');
+				document.body.classList.remove('loaded_hiding');
+			}, 500);
+		}
+	</script>
+	<div class="wrapper">
+		<main class="main">
+			<div class="image" id="klass_image_kras">
+				<img src="quiz.png" alt="Для красоты" class="image-krasa" height="250" width="280" id="image_kras">
+			</div>
+			<div class="quiz__head">
+				<div class="head__content" id="head">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ducimus
+					odit accusamus, illum quas magni provident odio praesentium commodi sint, porro harum, minus
+					cupiditate architecto culpa aut ex dolore officia.</div>
+			</div>
+			<div class="quiz__body">
+				<div class="buttons">
+					<div class="buttons__content" id="buttons">
+						<button class="button">Default button</button><br>
+						<button class="button button_wrong">Wrong answer</button><br>
+						<button class="button button_correct">Correct answer</button><br>
+						<button class="button button_passive">Unclicked button</button><br>
+					</div>
+				</div>
+
+				<div class="quiz__footer">
+					<div class="footer__content" id="pages">0 / 0</div>
+				</div>
+			</div>
+			<button onclick="restart_test();" class="button_restart" id="restart">На главную</button><br>
+			<script type="text/javascript" src="scripts/menu.js"></script>
+		</main>
+	</div>
+	<script type="text/javascript" src="scripts/app.js"></script>
+</body>
+
+</html>
